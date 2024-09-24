@@ -2,3 +2,11 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.map{
+  fill: rgb(151, 200, 255);
+  stroke: white;
+  &:hover {
+    fill: #828282
+  }
+}
