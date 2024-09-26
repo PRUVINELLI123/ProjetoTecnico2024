@@ -2,7 +2,7 @@ import { predictionServiceClient } from "@google-cloud/aiplatform";
 
 const projectId = 'my-italian-chatbot'
 const location = 'us-central1'
-const endpointId = ''
+const endpointId = 'endpoint'
 
 const client = new predictionServiceClient()
 
@@ -16,7 +16,7 @@ async function predict (instances) {
 }
 
 const instances = [
-    {content: 'Qual o ponto turístico mais famoso da Itália?'}
+    { content: 'Qual o ponto turístico mais famoso da Itália?' }
 ]
 
 predict(instances).then(predictions => {
