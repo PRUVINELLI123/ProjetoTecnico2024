@@ -1,11 +1,36 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+* {
+  margin: 0;
 }
 
-.map{
-  fill: rgb(151, 200, 255);
-  stroke: white;
+.background {
+  display: flex;
+  background-color: rgb(151, 200, 255);
+  width: 100%;
+}
+
+.map {
+  fill: #828282;
+  stroke: #272727;
+}
+
+#IT-42, #IT-21, #IT-23, #IT-45, #IT-25, #IT-34, #IT-36, #IT-32, #IT-88 {
+  fill: green;
+  &:hover {
+    fill: #828282
+  }
+}
+
+#IT-52, #IT-62, #IT-55, #IT-57, #IT-65 {
+  fill: white;
+  stroke: #272727;
+  &:hover {
+    fill: #828282
+  }
+}
+
+#IT-82, #IT-67, #IT-78, #IT-75, #IT-72, #IT-77 {
+  fill: red;
+  stroke: #272727;
   &:hover {
     fill: #828282
   }
