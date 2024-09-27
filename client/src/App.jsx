@@ -3,6 +3,7 @@ import './App.css'
 export default function App() {
    return (
       <div className='background'>
+         <xml version="1.0" encoding="UTF-8" standalone="no"/>
          <svg
             xmlns:mapsvg="http://mapsvg.com"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
