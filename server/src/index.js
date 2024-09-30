@@ -14,6 +14,14 @@ async function mainChat(region) {
     console.log(text);
 };
 
+const userQuestionDiv = (question) => {
+    return (
+        <div>
+            <p>{question}</p>
+        </div>
+    )
+}
+
 const AIResponseDiv = (ai_response) => {
     return (
         <div>
@@ -30,5 +38,6 @@ export async function getResponse(prompt) {
     const response = await message.response;
     const text = response.text();
 
+    userQuestionDiv(question);
     AIResponseDiv(text);
 }
