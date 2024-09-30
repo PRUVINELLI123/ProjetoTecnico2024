@@ -5,18 +5,16 @@ export default function ChatBot() {
     const [messages, setMessages] = React.useState('');
     const [responses, setResponses] = React.useState([]);
 
-    function handleSubmit(event, message) {
-        event.preventDefault()
-    
-        let userMessage = message
-        var prompt = userMessage.ariaValueMax.trim()
-    
-        if (prompt === "") {
-            return;
-        }
+    const handleSubmit = (event) => {
+        event.preventDefault();
     }
 
     return (
-        <h1>Hello World</h1>
+       <>
+        <form action="">
+            <input type="text" aria-valuemin={1} />
+            <button type="submit" onSubmit={handleSubmit}></button>
+        </form>
+       </>
     )
 }

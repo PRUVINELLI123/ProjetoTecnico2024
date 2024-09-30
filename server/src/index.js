@@ -5,7 +5,7 @@ const model = genAI.getGenerativeModel({ model: 'gemini-pro' })
 
 async function mainChat(region) {
     const message = await model.generateContent(
-        `Você está restrito a falar somente em italiano sobre a cultura da região ${region}`
+        `Você está restrito a falar somente em italiano e só sobre a cultura e a região de ${region}`
     )
     const response = await message.response
     const text = response.text()

@@ -3,9 +3,7 @@
 }
 
 .background {
-  display: flex;
   background-color: rgb(151, 200, 255);
-  width: 100%;
 }
 
 .map {
