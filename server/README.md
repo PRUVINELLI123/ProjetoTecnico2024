@@ -1,1 +1,0 @@
-# ProjetoTecnico2024
