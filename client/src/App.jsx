@@ -9,7 +9,7 @@ export default function ChatBot() {
 
    let userFinalMessage = null
 
-   async function generateResponse() {
+   async function generateResponse(message) {
       try {
          const response = await fetch(api_url, {
             method: "POST",
@@ -17,7 +17,7 @@ export default function ChatBot() {
             body: JSON.stringify({
                contents: [{
                   role: "user",
-                  parts: [{ text: userFinalMessage }]
+                  parts: [{ text: message }]
                }]
             })
          })
@@ -34,7 +34,9 @@ export default function ChatBot() {
    const handleSubmit = (event) => {
       event.preventDefault();
 
-      generateResponse(message);
+      userFinalMessage = message
+
+      generateResponse(userFinalMessage);
    }
 
    return (
@@ -44,7 +46,7 @@ export default function ChatBot() {
          </div>
          <div id="message_box">
             <form method='post' id='message_form'>
-               <input type="text" onChange={(e) => setMessage(e.target.value)} aria-valuemin={1} />
+               <input type="text" onChange={(e) => setMessage(e.target.value)} aria-valuemin={2} />
                <button type="submit" onSubmit={handleSubmit}>Enviar</button>
             </form>
          </div>
