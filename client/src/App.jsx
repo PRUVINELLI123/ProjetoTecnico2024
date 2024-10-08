@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 export default function ChatBot() {
    const api_key = "AIzaSyBidIQR-AhzrtAf_CRZHhJ6XvpLVyo2cg0"
@@ -41,8 +42,8 @@ export default function ChatBot() {
          <div className="chat_history">
             {/**/}
          </div>
-         <div>
-            <form action="">
+         <div id="message_box">
+            <form method='post' id='message_form'>
                <input type="text" onChange={(e) => setMessage(e.target.value)} aria-valuemin={1} />
                <button type="submit" onSubmit={handleSubmit}>Enviar</button>
             </form>
