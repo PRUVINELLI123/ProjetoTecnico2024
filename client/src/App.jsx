@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 export default function ChatBot() {
@@ -7,6 +7,14 @@ export default function ChatBot() {
 
    const [message, setMessage] = useState(''); // Mensagem atual do usuário
    const [chatHistory, setChatHistory] = useState([]); // Histórico de mensagens
+   const [topic, setTopic] = useState(''); // Assunto do chatbot com base na URL
+
+   // Função para obter o assunto atual da URL
+   useEffect(() => {
+      const urlPath = window.location.pathname; // Obtém o caminho da URL
+      const subject = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath; // Extrai o assunto
+      setTopic(subject); // Define o assunto
+   }, []);
 
    async function generateResponse(userMessage) {
       try {
@@ -16,7 +24,7 @@ export default function ChatBot() {
             body: JSON.stringify({
                contents: [{
                   role: "user",
-                  parts: [{ text: userMessage }]
+                  parts: [{ text: `Responda somente sobre o tema "${topic}": ${userMessage}` }]
                }]
             })
          });
