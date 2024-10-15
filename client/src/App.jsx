@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 export default function ChatBot() {
-   const api_key = "AIzaSyBidIQR-AhzrtAf_CRZHhJ6XvpLVyo2cg0";
-   const api_url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${api_key}`;
+   const api_key = "AIzaSyBidIQR-AhzrtAf_CRZHhJ6XvpLVyo2cg0"; // Chave para iniciar
+   const api_url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${api_key}`; // URL para funcionamento
 
    const [message, setMessage] = useState(''); // Mensagem atual do usuário
    const [chatHistory, setChatHistory] = useState([]); // Histórico de mensagens
    const [topic, setTopic] = useState(''); // Assunto do chatbot com base na URL
 
-   // Função para obter o assunto atual da URL
    useEffect(() => {
       const urlPath = window.location.pathname; // Obtém o caminho da URL
       const subject = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath; // Extrai o assunto
@@ -59,7 +58,7 @@ export default function ChatBot() {
          <div className="chat_history">
             {chatHistory.map((msg, index) => (
                <div key={index} className={msg.role === 'user' ? 'user-message' : 'bot-message'}>
-                  <strong>{msg.role === 'user' ? 'Você' : 'Bot'}:</strong> {msg.text}
+                  <strong>{msg.role === 'user' ? 'Você' : 'GiovanniBot'}:</strong> {msg.text}
                </div>
             ))}
          </div>
