@@ -23,7 +23,7 @@ export default function ChatBot() {
             body: JSON.stringify({
                contents: [{
                   role: "user",
-                  parts: [{ text: `Responda somente sobre o tema "${topic}": ${userMessage}` }]
+                  parts: [{ text: `Responda somente sobre a região italiana "${topic}": ${userMessage}` }]
                }]
             })
          });
