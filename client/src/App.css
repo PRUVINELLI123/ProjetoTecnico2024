@@ -1,49 +1,99 @@
 * {
   margin: 0;
-  padding: 0; 
-  box-sizing: border-box; 
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #292929;
 }
 
-body, html {
-  height: 100%; 
+.user-message {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 8px;
+  text-align: left;
+  height: 40px auto;
 }
 
-.background {
-  background-color: rgb(151, 200, 255);
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 100%; 
+#message_form {
+  display: flex;
+  width: 90%;
+  gap: 10px;
+  background-color: #212121;
 }
 
-.map {
-  fill: #828282;
-  stroke: #272727;
-  max-width: 100%; 
-  max-height: 100%; 
-  width: auto;
-  height: auto; 
+#message_form input {
+  width: 80%;
+  border: 2px solid;
+  border-radius: 16px;
+  background-color: #212121;
 }
 
-#IT-42, #IT-21, #IT-23, #IT-45, #IT-25, #IT-34, #IT-36, #IT-32, #IT-88 {
-  fill: green;
+#message_form button {
+  width: 20%;
+  border-color: transparent;
+  background-color: rgb(41, 41, 232);
+  font-weight: bold;
+
   &:hover {
-    fill: #828282
+      transition: all .3s ease-in-out;
+      color: rgb(41, 41, 232);
+      background-color: white;
+      cursor: pointer;
   }
 }
 
-#IT-52, #IT-62, #IT-55, #IT-57, #IT-65 {
-  fill: white;
-  stroke: #272727;
-  &:hover {
-    fill: #828282
-  }
+.user-message, .bot-message {
+  color: white;
+  font-size: 16px;
 }
 
-#IT-82, #IT-67, #IT-78, #IT-75, #IT-72, #IT-77 {
-  fill: red;
-  stroke: #272727;
-  &:hover {
-    fill: #828282
-  }
+.bot-message {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 8px;
+  text-align: left;
+  height: 40px auto;
+}
+
+.chat_history {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+}
+
+#message_box {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  background-color: #212121;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#message_form input,
+#message_form button {
+  padding: 8px;
+  border-radius: 16px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+#message_box input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+#message_box button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
