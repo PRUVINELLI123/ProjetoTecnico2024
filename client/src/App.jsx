@@ -8,6 +8,7 @@ export default function ChatBot() {
    const [message, setMessage] = useState(''); // Mensagem atual do usuário
    const [chatHistory, setChatHistory] = useState([]); // Histórico de mensagens
    const [topic, setTopic] = useState(''); // Assunto do chatbot com base na URL
+   const [isLoading, setIsLoading] = useState(false); // Estado de carregamento
 
    useEffect(() => {
       const urlPath = window.location.pathname; // Obtém o caminho da URL
@@ -16,6 +17,8 @@ export default function ChatBot() {
    }, []);
 
    async function generateResponse(userMessage) {
+      setIsLoading(true); // Inicia o estado de carregamento
+
       try {
          const response = await fetch(api_url, {
             method: "POST",
@@ -40,6 +43,8 @@ export default function ChatBot() {
       } catch (e) {
          console.error("Erro ao chamar a API:", e);
       }
+
+      setIsLoading(false); // Termina o estado de carregamento
    }
 
    const handleSubmit = (event) => {
@@ -61,6 +66,9 @@ export default function ChatBot() {
                   <strong>{msg.role === 'user' ? 'Você' : 'GiovanniBot'}:</strong> {msg.text}
                </div>
             ))}
+            {isLoading && (
+               <div className="loading-indicator bot-message"><strong>GiovanniBot</strong> está pensando...</div>
+            )}
          </div>
          <div id="message_box">
             <form onSubmit={handleSubmit} id='message_form'>
