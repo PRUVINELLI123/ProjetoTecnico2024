@@ -58,12 +58,23 @@ export default function ChatBot() {
       }
    };
 
+   // Função para formatar o texto e aplicar negrito ao conteúdo entre **asteriscos duplos**
+   const formatMessage = (text) => {
+      const parts = text.split(/(\*\*[^*]+\*\*)/); // Divide pelo padrão **texto**
+      return parts.map((part, index) => {
+         if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={index}>{part.slice(2, -2)}</strong>; // Remove ** e aplica <strong>
+         }
+         return part;
+      });
+   };
+
    return (
       <>
          <div className="chat_history">
             {chatHistory.map((msg, index) => (
                <div key={index} className={msg.role === 'user' ? 'user-message' : 'bot-message'}>
-                  <strong>{msg.role === 'user' ? 'Você' : 'GiovanniBot'}:</strong> {msg.text}
+                  <strong>{msg.role === 'user' ? 'Você' : 'GiovanniBot'}:</strong><br/> {formatMessage(msg.text)}<br/>
                </div>
             ))}
             {isLoading && (

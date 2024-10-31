@@ -1,71 +1,13 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #292929;
-}
-
-.user-message {
-  padding: 8px;
-  margin: 4px;
-  border-radius: 8px;
-  text-align: left;
-  height: 40px auto;
-}
-
-#message_form {
-  display: flex;
-  width: 90%;
-  gap: 10px;
-  background-color: #212121;
-}
-
-#message_form input {
-  width: 80%;
-  border: 2px solid;
-  border-radius: 16px;
-  background-color: #212121;
-}
-
-#message_form button {
-  width: 20%;
-  border-color: transparent;
-  background-color: rgb(41, 41, 232);
-  font-weight: bold;
-
-  &:hover {
-      transition: all .3s ease-in-out;
-      color: rgb(41, 41, 232);
-      background-color: white;
-      cursor: pointer;
-  }
-}
-
-.user-message, .bot-message {
-  color: white;
-  font-size: 16px;
-}
-
-.bot-message {
-  padding: 8px;
-  margin: 4px;
-  border-radius: 8px;
-  text-align: left;
-  height: 40px auto;
-}
-
-.chat_history {
-  display: flex;
-  height: 80vh;
-  flex-direction: column;
-  overflow-y: auto; /* Adiciona a rolagem vertical */
-  padding: 10px; /* Espaçamento interno opcional */
+  background-color: #181818;
 }
 
 #message_box {
   position: fixed;
-  bottom: 0; /* Garante que o box de mensagens fique no fundo */
-  width: 100%;
+  bottom: 0;
+  left: 0; /* Garante que o box fique alinhado à esquerda */
+  width: 100%; /* Ocupa toda a largura da tela */
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 20%;
@@ -74,29 +16,40 @@
   border-top-right-radius: 20px;
 }
 
-
-#message_form input,
-#message_form button {
+#message_form {
+  display: flex;
+  width: 100%; /* Ocupa toda a largura dentro do box */
+  gap: 10px;
+  background-color: #212121;
   padding: 8px;
+}
+
+#message_form input {
+  flex: 1; /* Garante que o input ocupe todo o espaço restante */
+  border: 2px solid;
   border-radius: 16px;
+  background-color: #212121;
+  color: white;
+  padding: 10px;
   outline: none;
-  color: white;
-  font-size: 16px;
 }
 
-#message_box input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-#message_box button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
+#message_form button {
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 16px;
+  background-color: rgb(41, 41, 232);
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#message_form button:hover {
+  color: rgb(41, 41, 232);
+  background-color: white;
+}
+
+.chat_history {
+  color: white;
 }
