@@ -65,7 +65,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-#message_form button:hover {
+#message_form button :hover {
   background-color: white;
   color: rgb(41, 41, 232);
 }
+
