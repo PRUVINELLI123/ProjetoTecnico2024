@@ -41,7 +41,7 @@ export default function ChatBot() {
             console.error("Erro ao obter resposta da API.");
          }
       } catch (e) {
-         console.error("Erro ao chamar a API:", e);
+         console.error("Erro ao chamar a AcPI:", e);
       }
 
       setIsLoading(false); // Termina o estado de carregamento
