@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { useParams } from 'react-router-dom';
 
 export default function ChatBot() {
+   const { regiao } = useParams();
+
    const api_key = "AIzaSyBidIQR-AhzrtAf_CRZHhJ6XvpLVyo2cg0"; // Chave para iniciar
    const api_url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${api_key}`; // URL para funcionamento
 
    const [message, setMessage] = useState(''); // Mensagem atual do usuário
    const [chatHistory, setChatHistory] = useState([]); // Histórico de mensagens
-   const [topic, setTopic] = useState(''); // Assunto do chatbot com base na URL
    const [isLoading, setIsLoading] = useState(false); // Estado de carregamento
-
-   useEffect(() => {
-      const urlPath = window.location.pathname; // Obtém o caminho da URL
-      const subject = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath; // Extrai o assunto
-      setTopic(subject); // Define o assunto
-   }, []);
 
    async function generateResponse(userMessage) {
       setIsLoading(true); // Inicia o estado de carregamento
@@ -26,7 +22,7 @@ export default function ChatBot() {
             body: JSON.stringify({
                contents: [{
                   role: "user",
-                  parts: [{ text: `Responda somente sobre a região italiana "${topic}": ${userMessage}` }]
+                  parts: [{ text: `Responda somente sobre a região italiana "${regiao}": ${userMessage}` }]
                }]
             })
          });

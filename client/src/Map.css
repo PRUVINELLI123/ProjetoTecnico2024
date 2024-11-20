@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+.map_main {
   stroke: #272727;
   max-width: 100%;
   max-height: 100%;
