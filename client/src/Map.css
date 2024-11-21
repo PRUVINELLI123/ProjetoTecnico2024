@@ -40,7 +40,6 @@
 #IT-32,
 #IT-88 {
   fill: green;
-
   &:hover {
     fill: #828282
   }
