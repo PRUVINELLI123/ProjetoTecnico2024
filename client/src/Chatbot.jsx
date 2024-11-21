@@ -37,7 +37,7 @@ export default function ChatBot() {
             console.error("Erro ao obter resposta da API.");
          }
       } catch (e) {
-         console.error("Erro ao chamar a API:", e);
+         console.error("Erro ao chamar a AcPI:", e);
       }
 
       setIsLoading(false); // Termina o estado de carregamento
@@ -54,6 +54,7 @@ export default function ChatBot() {
       }
    };
 
+ upstream
    // Função para formatar o texto e aplicar negrito ao conteúdo entre **asteriscos duplos**
    const formatMessage = (text) => {
       const parts = text.split(/(\*\*[^*]+\*\*)/); // Divide pelo padrão **texto**
@@ -65,6 +66,7 @@ export default function ChatBot() {
       });
    };
 
+ changes
    return (
       <>
          <div className="chat_history">
@@ -90,5 +92,4 @@ export default function ChatBot() {
             </form>
          </div>
       </>
-   );
-}
+   )}
