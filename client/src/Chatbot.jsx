@@ -54,7 +54,7 @@ export default function ChatBot() {
       }
    };
 
-<<<<<<< Updated upstream
+ upstream
    // Função para formatar o texto e aplicar negrito ao conteúdo entre **asteriscos duplos**
    const formatMessage = (text) => {
       const parts = text.split(/(\*\*[^*]+\*\*)/); // Divide pelo padrão **texto**
@@ -66,8 +66,7 @@ export default function ChatBot() {
       });
    };
 
-=======
->>>>>>> Stashed changes
+ changes
    return (
       <>
          <div className="chat_history">
@@ -93,9 +92,4 @@ export default function ChatBot() {
             </form>
          </div>
       </>
-   );
-<<<<<<< Updated upstream
-}
-=======
-}
->>>>>>> Stashed changes
+   )}
