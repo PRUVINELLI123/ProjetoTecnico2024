@@ -25,9 +25,10 @@
 ## 🐬 Prints
  
 ### Tela Inicial:
-<img src="map_img/tela inicial.jpg">
+<img src="map_img/tela inicial.jpg" />
+
 ### Chatbot Funcionando:
-<img src='map_img/chatbot funcionando.jpg'>
+<img src='map_img/chatbot funcionando.jpg' />
  
 ## 🦏 Conclusão
 **[O projeto se mostrou uma ótima ferramenta para obter as informações que alguém desejaria sobre as regiões solicitadas.]**
