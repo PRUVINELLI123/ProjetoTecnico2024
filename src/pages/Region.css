@@ -38,6 +38,7 @@
 }
 
 #message_form {
+  background-color: #212121;
   display: flex;
   width: 90%;
   gap: 10px;
@@ -52,12 +53,14 @@
   background-color: #212121;
   color: white;
   font-size: 16px;
+  outline: none;
 }
 
 #message_form button {
   padding: 10px 20px;
   background-color: rgb(41, 41, 232);
   color: white;
+  outline: none;
   font-weight: bold;
   border: none;
   border-radius: 16px;
@@ -69,4 +72,3 @@
   background-color: white;
   color: rgb(41, 41, 232);
 }
-
