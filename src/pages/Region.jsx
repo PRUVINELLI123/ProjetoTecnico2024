@@ -133,10 +133,94 @@ export default function ChatBot() {
         }
     };
 
+    function handleTopic () {
+        if (topic === 'region/umbria') {
+            return 'Umbria'
+        }
+
+        if (topic === 'region/lazio') {
+            return 'Lazio'
+        }
+
+        if (topic === 'region/abruzzo') {
+            return 'Abruzzo'
+        }
+
+        if (topic === 'region/basilicata') {
+            return 'Basilicata'
+        }
+
+        if (topic === 'region/calabria') {
+            return 'Calabria'
+        }
+
+        if (topic === 'region/campania') {
+            return 'Campania'
+        }
+
+        if (topic === 'region/emilia_romagna') {
+            return 'Emilia Romana'
+        }
+
+        if (topic === 'region/friuli-venezia_giulia') {
+            return 'Friuli-Venezia Giulia'
+        }
+
+        if (topic === 'region/Liguria') {
+            return 'Liguria'
+        }
+
+        if (topic === 'region/Lombardia') {
+            return 'Lombardia'
+        }
+
+        if (topic === 'region/Marche') {
+            return 'Marche'
+        }
+
+        if (topic === 'region/Molise') {
+            return 'Molise'
+        }
+
+        if (topic === 'region/Piemonte') {
+            return 'Piemonte'
+        }
+
+        if (topic === 'region/puglia') {
+            return 'Puglia'
+        }
+
+        if (topic === 'region/sardegna') {
+            return 'Sardenha'
+        }
+
+        if (topic === 'region/sicilia') {
+            return 'Sicília'
+        }
+
+        if (topic === 'region/toscana') {
+            return 'Toscana'
+        }
+        
+        if (topic === 'region/trentino-alto_adige') {
+            return 'Trentino-Alto Adige'
+        }
+
+        if (topic === 'region/vale_daosta') {
+            return 'Vale DaOsta'
+        }
+
+        if (topic === 'region/veneto') {
+            return 'Veneto'
+        }
+    }
+
+    const topicName = handleTopic()
+
     return (
         <>
             <header className='bot__header'>
-                <h1>Converse com nossa IA sobre </h1>
+                <h1>Converse com nossa IA sobre {topicName}</h1>
             </header>
             <div className="chat_history">
                 {chatHistory.map((msg, index) => (
