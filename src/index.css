@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.website__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: green;
+  color: white;
+}
+
+.website__header h1 {
+  background-color: green;
+}
+
+.bot__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}

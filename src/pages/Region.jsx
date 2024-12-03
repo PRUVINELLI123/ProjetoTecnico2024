@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Region.css';
+
 async function generateResponse(userMessage) {
     let apiResponse = '';
 
@@ -134,6 +135,9 @@ export default function ChatBot() {
 
     return (
         <>
+            <header className='bot__header'>
+                <h1>Converse com nossa IA sobre </h1>
+            </header>
             <div className="chat_history">
                 {chatHistory.map((msg, index) => (
                     <div key={index} className={msg.role === 'user' ? 'user-message' : 'bot-message'}>
