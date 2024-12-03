@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #292929;
+  font-family: sans-serif;
 }
 
 .chat_history {
