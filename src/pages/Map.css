@@ -12,6 +12,10 @@
     height: auto;
 }
 
+svg {
+    background-color: rgb(151, 200, 255);
+}
+
 .background {
     background-color: rgb(151, 200, 255);
     display: flex;
